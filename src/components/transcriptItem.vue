@@ -10,7 +10,7 @@
 					<span class="font_bold">Product ID:</span>
 					<span class="font_italic c_primary font_n2">{{ID}}</span>
 				</div>
-				<section id="label" class="print-flex_row">
+				<section id="label" class="print-flex_row max-w_3">
 					<div class="block self_baseline m-b_3" v-if="selectedSort == 'Product' && ProductTitle">
 						<span
 							class="font_0 font_n1:md font_bold bg_accent-4 c_black-7 p_2 p-x_3 br_radius"

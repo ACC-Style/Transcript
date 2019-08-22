@@ -5,6 +5,29 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
+		TranscriptDataInput: [{
+				label: "Activity",
+				type: "text",
+				required: true,
+				placeholder: "name of the activity"
+			}, {
+				label: "Product",
+				type: "text",
+				required: false,
+				placeholder: "group your activities by adding a parent product name"
+			},
+			{
+				label: "Date Claimed",
+				type: "date",
+				required: false,
+				placeholder: ""
+			}, {
+				label: "Upload Certificate",
+				type: "file",
+				required: true,
+				placeholder: ""
+			}
+		],
 		creditTypes: [{
 				shortName: "COP",
 				fullName: "Certificate of Participation",
@@ -37,7 +60,7 @@ export default new Vuex.Store({
 			},
 			{
 				shortName: "CNE<sup>rx</sup>",
-				fullName: "CNE<sup>rx</sup>",
+				fullName: "Continuing Nursing Education Pharmaceutical",
 				styleCode: "CNErx"
 			},
 			{
@@ -72,7 +95,7 @@ export default new Vuex.Store({
 			"ID": 2,
 			"ProductTitle": "CathSAP",
 			"Course": "Span",
-			"Activity": "Biodex",
+			"Activity": "Adult Congenital SAQs and Board Prep",
 			"DateCompleted": "7/23/2016",
 			"DateClaimed": "9/20/2018",
 			"Credits": [{
@@ -108,7 +131,7 @@ export default new Vuex.Store({
 			"ID": 5,
 			"ProductTitle": "Heart Songs",
 			"Course": null,
-			"Activity": "Sonsing",
+			"Activity": "Adult Congenital SAQs and Board Prep",
 			"DateCompleted": "10/18/2018",
 			"DateClaimed": "11/24/2017",
 			"Credits": [{
@@ -142,7 +165,7 @@ export default new Vuex.Store({
 			"ID": 7,
 			"ProductTitle": "Heart Songs",
 			"Course": "Temp",
-			"Activity": "Gembucket",
+			"Activity": "Adult Congenital SAQs and Board Prep",
 			"DateCompleted": "9/26/2018",
 			"DateClaimed": "8/16/2015",
 			"Credits": [{
@@ -187,7 +210,7 @@ export default new Vuex.Store({
 		}, {
 			"ID": 10,
 			"ProductTitle": null,
-			"Course": "Bitwolf",
+			"Course": "Recurrent Pericarditis: When It Won't Go Away",
 			"Activity": "Bigtax",
 			"DateCompleted": "10/14/2015",
 			"DateClaimed": "2/23/2016",
@@ -200,7 +223,7 @@ export default new Vuex.Store({
 			"ID": 11,
 			"ProductTitle": "ACCSAP",
 			"Course": "Bamity",
-			"Activity": "Kanlam",
+			"Activity": "Recent Advances in Nuclear Cardiology / CCT",
 			"DateCompleted": "9/12/2017",
 			"DateClaimed": "9/24/2015",
 			"Credits": [{
@@ -217,7 +240,7 @@ export default new Vuex.Store({
 			"ID": 12,
 			"ProductTitle": "CathSAP",
 			"Course": null,
-			"Activity": "Mat Lam Tam",
+			"Activity": "Adult Congenital SAQs and Board Prep",
 			"DateCompleted": "3/17/2019",
 			"DateClaimed": "6/19/2018",
 			"Credits": [{
@@ -338,7 +361,7 @@ export default new Vuex.Store({
 			"ID": 20,
 			"ProductTitle": "Cardiosourse Plus",
 			"Course": "Otcom",
-			"Activity": "It",
+			"Activity": "Recent Advances in Nuclear Cardiology / CCT",
 			"DateCompleted": "12/24/2017",
 			"DateClaimed": "2/6/2016",
 			"Credits": [{
@@ -350,7 +373,7 @@ export default new Vuex.Store({
 			"ID": 21,
 			"ProductTitle": "Heart Songs",
 			"Course": "Vagram",
-			"Activity": "Job",
+			"Activity": "Heart Failure SAQs and Board Prep",
 			"DateCompleted": "11/11/2018",
 			"DateClaimed": "3/27/2019",
 			"Credits": [{
@@ -396,7 +419,7 @@ export default new Vuex.Store({
 			"ID": 24,
 			"ProductTitle": null,
 			"Course": null,
-			"Activity": "Ventosanzap",
+			"Activity": "Heart Failure SAQs and Board Prep",
 			"DateCompleted": "5/11/2019",
 			"DateClaimed": "7/12/2018",
 			"Credits": [{
@@ -437,7 +460,7 @@ export default new Vuex.Store({
 			"ID": 27,
 			"ProductTitle": "Cardiosourse Plus",
 			"Course": null,
-			"Activity": "Voyatouch",
+			"Activity": "Heart Failure SAQs and Board Prep",
 			"DateCompleted": "11/9/2016",
 			"DateClaimed": "1/20/2017",
 			"Credits": [{
@@ -478,7 +501,7 @@ export default new Vuex.Store({
 			"ID": 30,
 			"ProductTitle": null,
 			"Course": null,
-			"Activity": "Y-find",
+			"Activity": "Atrial Tachycardia With Atrial Activation Duration Exceeding the Tachycardia Cycle Length: Mechanisms and Prevalence (JACC: Clinical Electrophysiology August 2019)",
 			"DateCompleted": "9/22/2017",
 			"DateClaimed": "1/4/2017",
 			"Credits": [{
@@ -490,7 +513,7 @@ export default new Vuex.Store({
 			"ID": 31,
 			"ProductTitle": "CathSAP",
 			"Course": null,
-			"Activity": "Wrapsafe",
+			"Activity": "Prevention, Diagnosis, and Management of Radiation Associated Cardiac Disease: JACC Scientific Expert Panel (JACC August 2019-2)",
 			"DateCompleted": "1/25/2016",
 			"DateClaimed": "3/16/2016",
 			"Credits": [{
@@ -502,7 +525,7 @@ export default new Vuex.Store({
 			"ID": 32,
 			"ProductTitle": "Cardiosourse Plus",
 			"Course": null,
-			"Activity": "Regrant",
+			"Activity": "Persistent Volume Overload: Constriction or Tricuspid Regurgitation?",
 			"DateCompleted": "3/20/2016",
 			"DateClaimed": "1/27/2019",
 			"Credits": [{
@@ -514,7 +537,7 @@ export default new Vuex.Store({
 			"ID": 33,
 			"ProductTitle": "ACCSAP",
 			"Course": null,
-			"Activity": "Ventosanzap",
+			"Activity": "CV Fellowship Directors Training",
 			"DateCompleted": "5/2/2017",
 			"DateClaimed": "3/4/2017",
 			"Credits": [{
@@ -531,7 +554,7 @@ export default new Vuex.Store({
 			"ID": 34,
 			"ProductTitle": "Heart Songs",
 			"Course": "Stim",
-			"Activity": "Cardify",
+			"Activity": "Prevention, Diagnosis, and Management of Radiation Associated Cardiac Disease: JACC Scientific Expert Panel (JACC August 2019-2)",
 			"DateCompleted": "7/26/2017",
 			"DateClaimed": "2/20/2018",
 			"Credits": [{
@@ -543,7 +566,7 @@ export default new Vuex.Store({
 			"ID": 35,
 			"ProductTitle": "ACCSAP",
 			"Course": null,
-			"Activity": "Bitwolf",
+			"Activity": "ECG of the Month: Chest Pain and Syncope",
 			"DateCompleted": "2/20/2017",
 			"DateClaimed": "5/29/2019",
 			"Credits": [{
@@ -560,7 +583,7 @@ export default new Vuex.Store({
 			"ID": 36,
 			"ProductTitle": "EP SAP",
 			"Course": null,
-			"Activity": "Sonair",
+			"Activity": "Multimodality Imaging Markers of Adverse Myocardial Remodeling in Aortic Stenosis - JIMG Aug 2019",
 			"DateCompleted": "10/3/2015",
 			"DateClaimed": "3/2/2019",
 			"Credits": [{
@@ -577,7 +600,7 @@ export default new Vuex.Store({
 			"ID": 37,
 			"ProductTitle": "Cardiosourse Plus",
 			"Course": "Transcof",
-			"Activity": "Sub-Ex",
+			"Activity": "Transcatheter Tricuspid Valve-in-Valve and Valve-in-Ring Implantation for Degenerated Surgical Prosthesis (JACC: Cardiovascular Interventions August 2019)",
 			"DateCompleted": "10/19/2016",
 			"DateClaimed": "6/16/2019",
 			"Credits": [{
@@ -594,7 +617,7 @@ export default new Vuex.Store({
 			"ID": 38,
 			"ProductTitle": "Heart Songs",
 			"Course": null,
-			"Activity": "Asoka",
+			"Activity": "Detection of Coronary Inflammation Using CT",
 			"DateCompleted": "2/18/2017",
 			"DateClaimed": "1/5/2018",
 			"Credits": [{
@@ -611,7 +634,7 @@ export default new Vuex.Store({
 			"ID": 39,
 			"ProductTitle": "CathSAP",
 			"Course": null,
-			"Activity": "Bamity",
+			"Activity": "The Evolution of Beta-Blockers in Coronary Artery Disease and Heart Failure (Part I) - JACC August 2019-1",
 			"DateCompleted": "4/8/2018",
 			"DateClaimed": "8/25/2016",
 			"Credits": [{
@@ -628,7 +651,7 @@ export default new Vuex.Store({
 			"ID": 40,
 			"ProductTitle": "ACCSAP",
 			"Course": null,
-			"Activity": "Konklab",
+			"Activity": "Risk of Heart Failure: The Opportunity for Prevention with American Heart Association's Life's Simple 7 (JACC: Heart Failure August 2019)",
 			"DateCompleted": "8/21/2018",
 			"DateClaimed": "1/27/2019",
 			"Credits": [{
@@ -640,7 +663,7 @@ export default new Vuex.Store({
 			"ID": 41,
 			"ProductTitle": null,
 			"Course": null,
-			"Activity": "Bitwolf",
+			"Activity": "Recurrent Pericarditis: When It Won't Go Away",
 			"DateCompleted": "7/27/2018",
 			"DateClaimed": "10/17/2016",
 			"Credits": [{
@@ -657,7 +680,7 @@ export default new Vuex.Store({
 			"ID": 42,
 			"ProductTitle": "Cardiosourse Plus",
 			"Course": null,
-			"Activity": "Tin",
+			"Activity": "A 65-Year-Old Woman Presents With Exertional Chest Pain",
 			"DateCompleted": "7/23/2019",
 			"DateClaimed": "4/20/2018",
 			"Credits": [{
@@ -674,7 +697,7 @@ export default new Vuex.Store({
 			"ID": 43,
 			"ProductTitle": null,
 			"Course": null,
-			"Activity": "Ventosanzap",
+			"Activity": "The High-Risk Polyvascular Patient",
 			"DateCompleted": "1/14/2016",
 			"DateClaimed": "5/5/2017",
 			"Credits": [{
@@ -829,7 +852,7 @@ export default new Vuex.Store({
 			"ID": 53,
 			"ProductTitle": "CathSAP",
 			"Course": null,
-			"Activity": "Bitwolf",
+			"Activity": "Recurrent Pericarditis: When It Won't Go Away",
 			"DateCompleted": "12/14/2015",
 			"DateClaimed": "6/18/2018",
 			"Credits": [{
@@ -984,7 +1007,7 @@ export default new Vuex.Store({
 			"ID": 63,
 			"ProductTitle": "Cardiosourse Plus",
 			"Course": null,
-			"Activity": "Konklab",
+			"Activity": "Risk of Heart Failure: The Opportunity for Prevention with American Heart Association's Life's Simple 7 (JACC: Heart Failure August 2019)",
 			"DateCompleted": "3/12/2016",
 			"DateClaimed": "1/17/2016",
 			"Credits": [{
@@ -1335,7 +1358,7 @@ export default new Vuex.Store({
 			"ID": 86,
 			"ProductTitle": "Cardiosourse Plus",
 			"Course": null,
-			"Activity": "Konklab",
+			"Activity": "Risk of Heart Failure: The Opportunity for Prevention with American Heart Association's Life's Simple 7 (JACC: Heart Failure August 2019)",
 			"DateCompleted": "5/18/2017",
 			"DateClaimed": "5/9/2017",
 			"Credits": [{
