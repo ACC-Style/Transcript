@@ -409,7 +409,9 @@ export default {
 			const flatCreditIn = creditIn.reduce(function(prev, curr) {
 				return prev.concat(curr);
 			});
-			return flatCreditIn;
+			return flatCreditIn.filter((value, index, self) => {
+				return self.indexOf(value) === index;
+			});
 		},
 		// creditsFilteredList: (credit)=>(this.selectedCreditFilter.indexOf(element) != -1 || this.selectedCreditFilter.length == 1),
 		creditsFilteredList: function() {
