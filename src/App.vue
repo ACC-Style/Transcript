@@ -398,15 +398,18 @@ export default {
 			return creditCount;
 		},
 		creditsInList: function() {
-			const creditIN = this.transcript
-				.flatMap(activity => {
+			const creditIn = this.transcript
+				.map(activity => {
 					let Credit = activity.Credits;
-					return Credit.flatMap(credit => {
+					return Credit.map(credit => {
 						return credit.Type;
 					});
 				})
 				.filter((value, index, self) => self.indexOf(value) === index);
-			return creditIN;
+			const flatCreditIn = creditIn.reduce(function(prev, curr) {
+				return prev.concat(curr);
+			});
+			return flatCreditIn;
 		},
 		// creditsFilteredList: (credit)=>(this.selectedCreditFilter.indexOf(element) != -1 || this.selectedCreditFilter.length == 1),
 		creditsFilteredList: function() {
